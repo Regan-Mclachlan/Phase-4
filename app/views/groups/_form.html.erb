@@ -1,0 +1,6 @@
+<%= form_for @group, url: add_user_to_group_path  do |f|%>
+    <%= f.label :group_type %><br>
+    <%= f.text_field :group_type %><br>
+    <%= f.select :users, User.all.collect {|p| [p.email]} %>
+    <%= f.submit %>
+<% end %>

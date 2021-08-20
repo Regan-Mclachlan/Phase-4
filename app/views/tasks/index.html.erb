@@ -1,5 +1,23 @@
-<% @tasks.each  do |task|%>
-    <h2>
-        <%= task.title%>
-    </h2>
-<% end %>
+<h2> "Completed" </h2>
+
+<% Task.tasks_completed.each do |task| %>
+    <h3>
+        <%= link_to task.title, task_path(task) %>
+    </h3>
+
+<%end%>
+<h2> "In Progress" </h2>
+<% Task.tasks_in_progress.each do |task| %>
+    <h3>
+        <%= link_to task.title, task_path(task) %>
+    </h3>
+
+<%end%>
+<h2> "Incomplete" </h2>
+<% Task.tasks_incomplete.each do |task| %>
+    <h3>
+        <%= link_to task.title, task_path(task) %>
+    </h3>
+
+<%end%>
+
