@@ -9,7 +9,6 @@ Rails.application.routes.draw do
     end
   end  
 
-
   resources :groups do
     resources :tasks
   end
@@ -18,11 +17,13 @@ Rails.application.routes.draw do
     resources :groups
   end
   
-  devise_for :users 
+  devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" } 
 
   resources :users do
     resources :groups
   end
+
+  resources :privacy_and_deletion_policy
 
   patch "/groups/:id/add_user", to: "groups#add_user_to_group", as: "add_user_to_group"
 
