@@ -1,6 +1,6 @@
 <%@groups.each do |group|%>
 <h2>
-<%= group.group_type%>
+<%=link_to group.group_type, group_path(group)%>
 </h2>
 
 <%end%>

@@ -1,23 +1,26 @@
-<h2> "Completed" </h2>
-
-<% Task.tasks_completed.each do |task| %>
-    <h3>
-        <%= link_to task.title, task_path(task) %>
-    </h3>
-
+<h2> "Incomplete" </h2>
+<% @task_groups.each do |group| %>
+    <%group.tasks_incomplete.each do |task|%>
+        <h3>
+            <%= link_to task.title, task_path(task) %>
+        </h3>
+    <%end%>
 <%end%>
 <h2> "In Progress" </h2>
-<% Task.tasks_in_progress.each do |task| %>
-    <h3>
-        <%= link_to task.title, task_path(task) %>
-    </h3>
-
+<% @task_groups.each do |group| %>
+    <%group.tasks_in_progress.each do |task|%>
+        <h3>
+            <%= link_to task.title, task_path(task) %>
+        </h3>
+    <%end%>
 <%end%>
-<h2> "Incomplete" </h2>
-<% Task.tasks_incomplete.each do |task| %>
-    <h3>
-        <%= link_to task.title, task_path(task) %>
-    </h3>
-
+<h2> "Completed" </h2>
+<% @task_groups.each do |group| %>
+    <%group.tasks_completed.last(5).each do |task|%>
+        <h3>
+            <%= link_to task.title, task_path(task) %>
+        </h3>
+    <%end%>
 <%end%>
+
 

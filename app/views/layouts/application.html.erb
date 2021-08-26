@@ -13,12 +13,24 @@
   <body>
   <% if notice %>
   <p class="alert alert-success"><%= notice %></p>
-<% end %>
-<% if alert %>
-  <p class="alert alert-danger"><%= alert %></p>
-<% end %>
+  <% end %>
+  <% if alert %>
+    <p class="alert alert-danger"><%= alert %></p>
+  <% end %>
 
-<%= link_to "Sign out", destroy_user_session_path, method: :delete%>
+  <%= image_tag ("adina-logo-white_22x.png"), class: "adina_logo" %>
+
+  <%= link_to "Sign out", destroy_user_session_path, method: :delete%>
     <%= yield %>
+    <button id=new_button>
+     <%= link_to "New Task", new_task_path %>
+     </button>
+    <div id="application_footer_links">
+      <b>
+      <%=  link_to "GROUPS", groups_path  %>
+      &nbsp;
+      <%= link_to "ALL TASKS", tasks_path %>
+      </b>
+    </div>
   </body>
 </html>

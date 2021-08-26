@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+body {
+    background-color: #414042; 
+    font-family: sans-serif;
+    src: url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+    color: #ffff; 
+    text-align: center;
+}
+#application_footer_links a{
+    color: rgb(76, 145, 190)
+}
+a {
+    color: lightblue;
+}
+.adina_logo {
+    width: 180px;
+    height: 45.23px;
+}
+#new_button {
+    transition-duration: 0.4s;
+    background-color: #414042;
+    padding: 8px 16px;
+    margin-bottom: 10px;
+}
+#new_button a{
+    color: rgb(76, 145, 190);
+    font-size: 16px;
+}
+  
+#new_button:hover {
+    background-color: lightblue; /* Green */
+    color: white;
+}

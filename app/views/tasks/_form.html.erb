@@ -4,5 +4,6 @@
     <%= f.label :description %><br>
     <%= f.text_area :description %><br>
     <%= f.select :status, ['Completed', 'Incomplete', 'In Progress'] %>
+    <%= f.collection_check_boxes :groups_id, Group.all, :id, :group_type, include_hidden: false%>
     <%= f.submit %>
 <% end %>
