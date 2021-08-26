@@ -7,6 +7,7 @@
 # Ignore bundler config.
 /.bundle
 .env
+/config/initializers/devise.rb
 # Ignore the default SQLite database.
 /db/*.sqlite3
 /db/*.sqlite3-*
