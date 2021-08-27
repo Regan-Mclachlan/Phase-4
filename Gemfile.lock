@@ -284,7 +284,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   spring
-  sqlite3 (~> 1.4)
+  sqlite3 (~> 1.4.2)
   therubyracer
   turbolinks (~> 5)
   tzinfo-data
